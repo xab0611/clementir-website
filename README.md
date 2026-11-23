@@ -31,5 +31,6 @@ Final Term Activity 1 (CSS)
 IMPORTANT CUSTOMIZATION
 - The proposal does not provide an exact street address, opening hours, phone number, product prices, or real customer reviews. Replace the clearly marked placeholders only with confirmed details.
 - The order inquiry form is a front-end sample only. It does not send or store orders until connected to a form service or backend.
-- Replace the emoji illustration placeholders with your own bakery photos in the Gallery and product sections (create an images/ folder for them).
+- Replace the emoji illustration placeholders with your own bakery photos in the Gallery and product sections (images/hapag-hero.jpg is the home screen photo).
 - Review and understand the HTML/CSS so you can explain the code during your lab check.
+- Logo: inline SVG symbol plus spaced-letter HAPAG wordmark in index.html (header and footer); look: dark red wall, wood slats, orange glow, parquet footer (css/style.css)
