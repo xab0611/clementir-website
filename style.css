@@ -1,0 +1,674 @@
+/* Hapag Bakehouse - style.css
+   Colors I picked: brown #4A2C1A, orange #B5651D, cream #FFF6E9, green #7A8F6A
+   Selectors I practiced (Final Term Activity 1):
+   universal *, element, class, #id, grouping (h1, h2, h3), descendant, child (>),
+   adjacent sibling (+), general sibling (~), :hover :focus :first-child :last-child
+   :nth-child(even), attribute [type="text"] [required]
+*/
+
+:root {
+  --brown: #4A2C1A;
+  --orange: #B5651D;
+  --cream: #FFF6E9;
+  --green: #7A8F6A;
+  --tan: #F0E2CF;
+}
+
+/* ---------- basics ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: #5D4638;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--brown);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+}
+
+h1 { font-size: 48px; margin: 10px 0 18px; }
+h2 { font-size: 34px; margin: 6px 0 14px; }
+h3 { font-size: 20px; margin: 0 0 8px; }
+
+p { margin-top: 0; }
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+/* ---------- header and nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--cream);
+  border-bottom: 2px solid var(--brown);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.brand {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--brown);
+}
+
+.brand-mark {
+  color: var(--orange);
+  margin-right: 6px;
+}
+
+.brand-accent {
+  color: var(--orange);
+  font-style: italic;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links > li {
+  white-space: nowrap;
+}
+
+.nav-links a {
+  color: var(--brown);
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: var(--orange);
+  text-decoration: underline;
+}
+
+/* buttons */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--orange);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--brown);
+}
+
+.button-small {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+/* ---------- hero ---------- */
+.hero {
+  padding: 60px 0;
+}
+
+.hero-grid {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-copy {
+  flex: 1;
+}
+
+.hero h1 span {
+  color: var(--orange);
+}
+
+.hero-text {
+  font-size: 17px;
+}
+
+.hero-actions {
+  margin-top: 24px;
+}
+
+.text-link {
+  color: var(--orange);
+  font-weight: bold;
+  margin-left: 18px;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.hero-note {
+  margin-top: 24px;
+  font-size: 13px;
+  color: #8B7768;
+}
+
+.hero-art {
+  flex: 1;
+  position: relative;
+  height: 340px;
+  background-color: #EAD6BC;
+  border: 3px solid var(--brown);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.sun-shape {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #D8A56E;
+}
+
+.bread-illustration {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  font-size: 150px;
+}
+
+.pastry-illustration {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  font-size: 60px;
+}
+
+.hero-sticker {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  padding: 10px 14px;
+  background-color: var(--green);
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  transform: rotate(6deg);
+}
+
+/* ---------- announcement bar ---------- */
+.announcement {
+  background-color: var(--brown);
+  color: var(--cream);
+  padding: 14px 0;
+  text-align: center;
+}
+
+.announcement p {
+  display: inline;
+  margin: 0 10px;
+}
+
+.announcement a {
+  color: #F2C58D;
+  font-weight: bold;
+}
+
+.announcement a:hover {
+  text-decoration: underline;
+}
+
+.announcement-icon {
+  color: #F2C58D;
+}
+
+/* ---------- sections ---------- */
+.section {
+  padding: 70px 0;
+}
+
+.section-heading {
+  max-width: 620px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.section-heading > p:last-child {
+  color: #806D5F;
+}
+
+/* menu cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.product-card {
+  background-color: white;
+  border: 2px solid var(--brown);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  border-color: var(--orange);
+}
+
+.product-art {
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  font-size: 64px;
+}
+
+.art-bread { background-color: #F0D8B8; }
+.art-pastry { background-color: #E8DCCB; }
+.art-cake { background-color: #F0D6D0; }
+.art-gift { background-color: #DCE3D2; }
+
+.product-info {
+  padding: 16px;
+}
+
+.product-type {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.product-info h3 + p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.menu-note, .small-note {
+  margin-top: 22px;
+  text-align: center;
+  color: #8B7768;
+  font-size: 13px;
+}
+
+/* menu table */
+.table-wrap {
+  margin-top: 40px;
+  overflow-x: auto;
+}
+
+.menu-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  font-size: 15px;
+}
+
+.menu-table caption {
+  padding-bottom: 10px;
+  text-align: left;
+  color: var(--brown);
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border: 1px solid #D9C3A8;
+}
+
+th {
+  background-color: var(--brown);
+  color: var(--cream);
+}
+
+.menu-table tbody tr:nth-child(even) {
+  background-color: var(--tan);
+}
+
+.menu-table tbody tr:hover {
+  background-color: #F0D8B8;
+}
+
+.menu-table tfoot td {
+  text-align: center;
+  font-size: 13px;
+  color: #806D5F;
+}
+
+/* ---------- pre-order ---------- */
+.preorder-section {
+  background-color: var(--tan);
+}
+
+#preorders {
+  border-top: 2px solid var(--brown);
+  border-bottom: 2px solid var(--brown);
+}
+
+.preorder-grid {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.preorder-copy {
+  flex: 1;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+}
+
+.check-list li {
+  margin: 10px 0;
+}
+
+.check-list li::before {
+  content: "✓ ";
+  color: var(--green);
+  font-weight: bold;
+}
+
+.preorder-copy h3 {
+  margin-top: 28px;
+}
+
+.steps-list {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.steps-list li {
+  margin: 6px 0;
+}
+
+.steps-list li:last-child {
+  font-weight: bold;
+  color: var(--brown);
+}
+
+/* form */
+.inquiry-form {
+  flex: 1;
+  padding: 28px;
+  background-color: white;
+  border: 2px solid var(--brown);
+  border-radius: 8px;
+}
+
+.inquiry-form h3 {
+  font-size: 24px;
+}
+
+.form-note {
+  font-size: 13px;
+  color: #8B7768;
+}
+
+.inquiry-form label {
+  display: block;
+  margin: 14px 0 4px;
+  color: var(--brown);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.inquiry-form input, .inquiry-form select, .inquiry-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #BFA98F;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.inquiry-form input:focus, .inquiry-form select:focus, .inquiry-form textarea:focus {
+  outline: 3px solid var(--orange);
+}
+
+.inquiry-form input[type="text"] {
+  border-color: var(--green);
+}
+
+.inquiry-form input[type="date"] {
+  border-color: var(--orange);
+}
+
+.inquiry-form [required] {
+  border-left: 4px solid var(--green);
+}
+
+.form-button {
+  width: 100%;
+  margin-top: 18px;
+}
+
+/* ---------- about ---------- */
+.about-grid {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-art {
+  flex: 1;
+  position: relative;
+  height: 300px;
+  line-height: 300px;
+  text-align: center;
+  font-size: 120px;
+  background-color: #E4D5C2;
+  border: 2px dashed var(--brown);
+  border-radius: 8px;
+}
+
+.about-sparkle {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  color: var(--orange);
+  font-size: 36px;
+  line-height: 70px;
+}
+
+.about-copy {
+  flex: 1;
+}
+
+.about-copy h2 ~ p {
+  max-width: 560px;
+}
+
+.about-copy .text-link {
+  margin-left: 0;
+}
+
+/* ---------- gallery and reviews ---------- */
+.gallery-section {
+  background-color: var(--tan);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.gallery-tile {
+  height: 170px;
+  line-height: 170px;
+  text-align: center;
+  font-size: 60px;
+  border: 2px solid var(--brown);
+  border-radius: 8px;
+}
+
+.gallery-one { background-color: #E9D0AD; }
+.gallery-two { background-color: #E4D8C8; }
+.gallery-three { background-color: #EBCFC9; }
+.gallery-four { background-color: #D7DFCE; }
+
+.reviews-section {
+  text-align: center;
+}
+
+.review-content {
+  max-width: 650px;
+}
+
+.review-placeholder {
+  display: inline-block;
+  padding: 16px 26px;
+  border: 2px dashed #BFA98F;
+  color: #806D5F;
+}
+
+/* ---------- footer ---------- */
+.site-footer {
+  background-color: var(--brown);
+  color: #E3D3C4;
+  padding: 50px 0 18px;
+}
+
+.site-footer h3 {
+  color: #F2C58D;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-brand {
+  color: var(--cream);
+}
+
+.footer-description {
+  max-width: 260px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.footer-grid p, .footer-grid a:not(.brand) {
+  display: block;
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.footer-grid a[href^="#"]:hover {
+  color: #F2C58D;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 34px;
+  padding-top: 16px;
+  border-top: 1px solid #7A5A44;
+  font-size: 13px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.mobile-order-button {
+  display: none;
+}
+
+/* ---------- tablet ---------- */
+@media (max-width: 900px) {
+  .nav-wrap {
+    flex-wrap: wrap;
+  }
+
+  .nav-wrap nav {
+    order: 3;
+    width: 100%;
+    margin-top: 10px;
+    overflow-x: auto;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- phone ---------- */
+@media (max-width: 650px) {
+  h1 { font-size: 36px; }
+  h2 { font-size: 28px; }
+
+  .hero-grid, .preorder-grid, .about-grid {
+    flex-direction: column;
+  }
+
+  .hero-art, .about-art, .inquiry-form {
+    width: 100%;
+  }
+
+  .hero-art { height: 260px; }
+  .bread-illustration { font-size: 110px; top: 60px; }
+
+  .section { padding: 50px 0; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .footer-grid, .footer-bottom {
+    flex-direction: column;
+  }
+
+  .nav-order {
+    display: none;
+  }
+
+  .mobile-order-button {
+    display: block;
+    position: fixed;
+    bottom: 12px;
+    left: 5%;
+    width: 90%;
+    padding: 12px;
+    z-index: 20;
+    border-radius: 6px;
+    background-color: var(--orange);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .site-footer {
+    padding-bottom: 80px;
+  }
+}
