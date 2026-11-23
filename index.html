@@ -5,18 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Hapag Bakehouse — freshly baked bread, pastries, and made-to-order celebration cakes in Quezon City.">
   <title>Hapag Bakehouse | Freshly Baked, Made with Heart</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Header and Navigation -->
+  <!-- ===== Header and Navigation (sticky) ===== -->
   <header class="site-header" id="home">
     <div class="container nav-wrap">
       <a class="brand" href="#home" aria-label="Hapag Bakehouse home">
         <span class="brand-mark" aria-hidden="true">✳</span>
-        <span>Hapag <em>Bakehouse</em></span>
+        <span>Hapag <span class="brand-accent">Bakehouse</span></span>
       </a>
       <nav aria-label="Main navigation">
         <ul class="nav-links">
@@ -33,7 +30,7 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
+    <!-- ===== Hero Section: main headline and call-to-action buttons ===== -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -55,7 +52,7 @@
       </div>
     </section>
 
-    <!-- Announcement Banner -->
+    <!-- ===== Announcement Banner: invites visitors to ask about cakes ===== -->
     <section class="announcement">
       <div class="container announcement-inner">
         <span class="announcement-icon" aria-hidden="true">✦</span>
@@ -64,7 +61,7 @@
       </div>
     </section>
 
-    <!-- Menu and Product Highlights -->
+    <!-- ===== Menu: product cards (article) + menu summary table ===== -->
     <section class="section" id="menu">
       <div class="container">
         <div class="section-heading">
@@ -90,22 +87,54 @@
             <div class="product-info"><p class="product-type">FOR SHARING</p><h3>Pastry &amp; Holiday Boxes</h3><p>A thoughtful box of treats for family, friends, and gifts.</p></div>
           </article>
         </div>
+
+        <!-- Menu summary table: thead = column headers, tbody = data rows, tfoot = note using colspan -->
+        <div class="table-wrap">
+          <table class="menu-table">
+            <caption>Menu at a glance</caption>
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Label</th>
+                <th scope="col">Best for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Fresh Pandesal</strong></td><td>Daily favorite</td><td>Your everyday table</td></tr>
+              <tr><td><strong>Classic Ensaymada</strong></td><td>Sweet treat</td><td>A little afternoon joy</td></tr>
+              <tr><td><strong>Celebration Cakes</strong></td><td><em>Made to order</em></td><td>Birthdays and special days</td></tr>
+              <tr><td><strong>Pastry &amp; Holiday Boxes</strong></td><td>For sharing</td><td>Family, friends, and gifts</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="3"><em>Prices and availability may change.</em> Please contact Hapag Bakehouse for current details.</td></tr>
+            </tfoot>
+          </table>
+        </div>
         <p class="menu-note">Menu availability and prices may change. Please contact Hapag Bakehouse for current details.</p>
       </div>
     </section>
 
-    <!-- Cakes and Pre-order Section -->
+    <!-- ===== Cakes and Pre-orders: unordered list, ordered list, and inquiry form ===== -->
     <section class="section preorder-section" id="preorders">
       <div class="container preorder-grid">
         <div class="preorder-copy">
           <p class="eyebrow">LET'S CELEBRATE</p>
           <h2>Your special day deserves a special cake.</h2>
           <p>Tell us what you are planning. Send an inquiry with your preferred date, flavor, size, and pickup or delivery preference.</p>
+          <!-- Unordered list: order does not matter -->
           <ul class="check-list">
             <li>Birthday and celebration cakes</li>
             <li>Custom cake inquiries</li>
             <li>Holiday and group orders</li>
           </ul>
+          <h3>How to order</h3>
+          <!-- Ordered list: the steps must be followed in order -->
+          <ol class="steps-list">
+            <li>Choose what you would like to order.</li>
+            <li>Pick your <strong>preferred date</strong>.</li>
+            <li>Add the flavor, size, and <em>pickup or delivery</em> notes.</li>
+            <li>Send the inquiry and confirm the details with the bakery.</li>
+          </ol>
         </div>
         <form class="inquiry-form" action="#" method="get">
           <h3>Start an inquiry</h3>
@@ -130,7 +159,7 @@
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ===== About Section ===== -->
     <section class="section about-section" id="about">
       <div class="container about-grid">
         <div class="about-art" role="img" aria-label="Illustration of a cozy bakery table">
@@ -140,14 +169,14 @@
         <div class="about-copy">
           <p class="eyebrow">OUR STORY</p>
           <h2>More than bread. A place at the table.</h2>
-          <p>Hapag Bakehouse is a fictional family-run neighborhood bakery. It began as a home-based bakery in 2019 and moved into a small storefront in 2022.</p>
+          <p>Hapag Bakehouse is a fictional family-run neighborhood bakery. It began as a <strong>home-based bakery in 2019</strong> and moved into a small storefront in <strong>2022</strong>.</p>
           <p>Inspired by the Filipino idea of <em>hapag</em> — the dining table — our story is about bringing people together through everyday bread, sweet treats, and pastries made for life's celebrations.</p>
           <a class="text-link" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- ===== Gallery Section (emoji placeholders for real photos) ===== -->
     <section class="section gallery-section" id="gallery">
       <div class="container">
         <div class="section-heading">
@@ -164,8 +193,8 @@
       </div>
     </section>
 
-    <!-- Customer Reviews -->
-    <section class="section reviews-section">
+    <!-- ===== Customer Reviews (placeholder) ===== -->
+    <section class="section reviews-section" id="reviews">
       <div class="container review-content">
         <p class="eyebrow">KIND WORDS</p>
         <h2>Good things are better when shared.</h2>
@@ -179,7 +208,7 @@
   <footer class="site-footer" id="contact">
     <div class="container footer-grid">
       <div>
-        <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">✳</span><span>Hapag <em>Bakehouse</em></span></a>
+        <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">✳</span><span>Hapag <span class="brand-accent">Bakehouse</span></span></a>
         <p class="footer-description">Freshly baked favorites and treats made for sharing.</p>
       </div>
       <div>
